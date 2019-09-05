@@ -48,11 +48,11 @@ public class bulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player1"))
         {
-            player1.transform.position = player1.transform.position = p1Respawn.position;
+            player1.transform.position = p1Respawn.position;
         }
         if (other.gameObject.CompareTag("Player2"))
         {
-            player2.transform.position = player1.transform.position = p2Respawn.position;
+            player2.transform.position = p2Respawn.position;
         }
     }
 }
