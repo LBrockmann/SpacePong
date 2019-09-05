@@ -8,6 +8,12 @@ public class bulletScript : MonoBehaviour
     public float bulletSpeed;
     public float resetPoint;
     public bool moveLeft;
+    public GameObject player1;
+    public GameObject player2;
+    public Transform p1Respawn;
+    public Transform p2Respawn;
+    
+    
     
     // Start is called before the first frame update
     void Start()
@@ -42,11 +48,11 @@ public class bulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player1"))
         {
-            
+            player1.transform.position = player1.transform.position = p1Respawn.position;
         }
         if (other.gameObject.CompareTag("Player2"))
         {
-            
+            player2.transform.position = player1.transform.position = p2Respawn.position;
         }
     }
 }
