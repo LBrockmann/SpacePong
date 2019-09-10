@@ -23,16 +23,16 @@ public class ballMovementScriot : MonoBehaviour
     {
 
 
-       coinFlip = Random.Range(-1, 1);
-       if (coinFlip <= 0)
+       coinFlip = Random.Range(0, 2)*2f-1f;
+       if (coinFlip >= 0)
        {
            ballVelocityside = ballVelocityside;
            Debug.Log("tails");    
        }
 
-       if (coinFlip > 0)
+       else if (coinFlip < 0)
        {
-           ballVelocityside = -ballVelocityside;
+           ballVelocityside = ballVelocityside - (ballVelocityside*2f);
            Debug.Log("heads");
        }
        
