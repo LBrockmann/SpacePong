@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - ball
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Rockets
   - Colliders
   - bullets
-  - 
+  - SpecialBullet
   - 
   - 
   - 

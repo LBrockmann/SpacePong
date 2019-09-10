@@ -12,7 +12,7 @@ public class bulletScript : MonoBehaviour
     public GameObject player2;
     public Transform p1Respawn;
     public Transform p2Respawn;
-    
+    private float randomy;
     
     
     // Start is called before the first frame update
@@ -24,13 +24,14 @@ public class bulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        randomy = Random.Range(-4.2f, 4.2f);
         if (moveLeft == false)
         {
             transform.Translate((Vector3.right * bulletSpeed * Time.deltaTime));
 
             if (transform.position.x > 8.9)
             {
-                transform.position = new Vector3(-8.9f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(-8.9f, randomy, transform.position.z);
             }
         }
 
@@ -39,7 +40,7 @@ public class bulletScript : MonoBehaviour
             transform.Translate((Vector3.left * bulletSpeed * Time.deltaTime)); 
             if (transform.position.x < -8.9f)
             {
-                transform.position = new Vector3(8.9f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(8.9f, randomy, transform.position.z);
             }
         }
     }

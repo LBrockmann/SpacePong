@@ -37,12 +37,12 @@ public class RocketMover : MonoBehaviour
         
         if (playerTwo)
         {
-            if (Input.GetKey(KeyCode.Keypad8))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
                 transform.Translate(Vector3.up * rocketSpeed * Time.deltaTime, Space.World);
             }
 
-            if (Input.GetKey(KeyCode.Keypad2))
+            if (Input.GetKey(KeyCode.DownArrow))
             {
                 transform.Translate(Vector3.down * rocketSpeed * Time.deltaTime, Space.World);
             }
