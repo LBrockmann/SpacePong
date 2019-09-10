@@ -28,18 +28,18 @@ public class bulletScript : MonoBehaviour
         {
             transform.Translate((Vector3.right * bulletSpeed * Time.deltaTime));
 
-            if (transform.position.x > 6.8f)
+            if (transform.position.x > 8.9)
             {
-                transform.position = new Vector3(-7.15f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(-8.9f, transform.position.y, transform.position.z);
             }
         }
 
         if (moveLeft)
         {
             transform.Translate((Vector3.left * bulletSpeed * Time.deltaTime)); 
-            if (transform.position.x < -7.15f)
+            if (transform.position.x < -8.9f)
             {
-                transform.position = new Vector3(6.8f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(8.9f, transform.position.y, transform.position.z);
             }
         }
     }
