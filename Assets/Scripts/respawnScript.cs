@@ -44,6 +44,7 @@ public class respawnScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player1") || other.gameObject.CompareTag("Player2"))
         {
             score = score + 1;
+            Debug.Log("score 1");
             Debug.Log(score);
             rocket.transform.position = respawnPoint1.position;
             Debug.Log("respawn");
@@ -53,6 +54,7 @@ public class respawnScript : MonoBehaviour
         {
             ballMove = false;
             score = score + 2;
+         
             ball.transform.position = new Vector3(-0.31f,-1.95f,0f);
             ballVelocityside = 60f;
             ball.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
